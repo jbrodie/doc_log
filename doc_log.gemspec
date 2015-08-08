@@ -7,14 +7,14 @@ require 'doc_log/version'
 Gem::Specification.new do |s|
   s.name        = 'doc_log'
   s.version     = DocLog::VERSION
-  s.authors     = ['Jay brodie']
+  s.authors     = ['Jay Brodie']
   s.email       = ['jason.d.brodie@gmail.com']
   s.homepage    = 'https://github.com/jbrodie/doc_log'
   s.summary     = 'Allows for sync and local access to DocRaptor log files.'
   s.description = 'Sync and view your DocRaptor log files locally.  Prevents having to give out your login to the service to the entire team.'
   s.license     = 'MIT'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']
+  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_dependency 'rails', '~> 4.2', '>= 4.2.3'
   s.add_dependency 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.0'
