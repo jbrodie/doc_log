@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <%= render partial: 'table_header' %>
+      </thead>
+      <tbody id="logs_table_body">
+        <%= render partial: 'raw_log', collection: @logs %>
+      </tbody>
+    <table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 text-center" id="paginator">
+    <%= paginate @logs, :remote => true %>
+  </div>
+</div>

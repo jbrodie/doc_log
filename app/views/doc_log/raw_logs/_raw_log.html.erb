@@ -1,0 +1,10 @@
+<tr>
+  <td><%= raw_log.doc_raptor_log_id %></td>
+  <td><%= status_label(raw_log.success) %></td>
+  <td><%= raw_log.name %></td>
+  <td><%= document_type_label(raw_log.document_type) %></td>
+  <td><%= test_label(raw_log.test) %></td>
+  <td><%= javascript_label(raw_log.javascript) %></td>
+  <td><%= aysnc_label(raw_log.async) %></td>
+  <td><%= link_to 'View', raw_log_path(raw_log.id), class: 'btn btn-xs btn-primary pull-right' %></td>
+</tr>

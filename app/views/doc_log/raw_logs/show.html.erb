@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to "Back", raw_logs_path, class: 'btn btn-primary pull-right' %><br /><br />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-border">
+      <tr>
+        <td>Status:</td>
+        <td><%= status_label(@log.success) %></td>
+      </tr>
+      <tr>
+        <td class="col-md-3">Created At:</td>
+        <td><%= @log.doc_raptor_created_at %></td>
+      </tr>
+      <tr>
+        <td>Generation Time:</td>
+        <td><%= @log.generation_time %> seconds</td>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td><%= @log.name %></td>
+      </tr>
+      <tr>
+        <td>Document Type:</td>
+        <td><%= @log.document_type %></td>
+      </tr>
+      <tr>
+        <td>Document URL:</td>
+        <td><%= @log.document_url %></td>
+      </tr>
+      <tr>
+        <td>Tags:</td>
+        <td><%= @log.tag %></td>
+      </tr>
+      <tr>
+        <td>Test:</td>
+        <td><%= test_label(@log.test) %></td>
+      </tr>
+      <tr>
+        <td>Javascript:</td>
+        <td><%= javascript_label(@log.javascript) %></td>
+      </tr>
+      <tr>
+        <td>Async:</td>
+        <td><%= aysnc_label(@log.async) %></td>
+      </tr>
+      <tr>
+        <td>Strict:</td>
+        <td><%= @log.strict %></td>
+      </tr>
+      <tr>
+        <td>IP Address:</td>
+        <td><%= @log.ip_address %></td>
+      </tr>
+      <tr>
+        <td>Input Size:</td>
+        <td><%= number_to_human_size(@log.input_size) %></td>
+      </tr>
+      <tr>
+        <td>Output Size:</td>
+        <td><%= number_to_human_size(@log.output_size) %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Prince Options</h3>
+      </div>
+      <div class="panel-body">
+        <%= @log.prince_options %>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Validation Errors</h3>
+      </div>
+      <div class="panel-body">
+        <%= @log.validation_errors %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 well">
+    <h3>Generation Log</h3>
+    <p><%= simple_format(@log.generation_log) %></p>
+  </div>
+</div>
