@@ -35,3 +35,7 @@ DocLog::Sync.sync
 ## Contibute
 
 Fork the repo, and submit a pull request.
+
+## Supporters
+
+Tested with Browser Stack (http://www.browserstack.com)
